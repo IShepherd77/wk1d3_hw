@@ -79,14 +79,31 @@ p users
 
 
 #10. Add another person to the users hash
-ian = {"Ian" =>
-  {twitter: "ian@twitter",
-    lottery_numbers: [1,2,3,4,5,6],
-    home_town: "Edinburgh",
-    pets: {
-      "Dave" => :cat,
-      "Mickey" => :mouse}
+# ian = {"Ian" =>
+#   {twitter: "ian@twitter",
+#     lottery_numbers: [1,2,3,4,5,6],
+#     home_town: "Edinburgh",
+#     pets: {
+#       "Dave" => :cat,
+#       "Mickey" => :mouse}
+#       }
+#     }
+# users.merge(ian)
+# p users
+
+ian = {
+  "Ian" => {
+    :twitter => "ian@twitter",
+    :lottery_numbers => [1,2,3,4,5,6],
+    :hometown => "Edinburgh",
+    :pets => [
+      {
+        :name => "Dave",
+        :species => "dog"
       }
-    }
-users.merge(ian)
+    ]
+  }
+}
+
+users.merge!(ian)
 p users
