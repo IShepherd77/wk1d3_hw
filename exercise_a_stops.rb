@@ -21,6 +21,7 @@ p stops.length
 p stops[2]
 p stops.fetch(2)
 p stops.first(3)
+p stops.last(5)
 
 # 9. Reverse the positions of the stops in the array
 p stops.reverse
